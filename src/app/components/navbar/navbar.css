@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+  background: white;
+
+  /* --- Added for Fixed Top Effect --- */
+  position: sticky;      /* Keeps it at the top of the parent container */
+  top: 0;               /* Anchors it to the very top */
+  z-index: 1000;        /* Ensures it stays above all other content/images */
+  
+  /* Optional: Adds a subtle blur effect for a premium feel */
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95); 
+}
+
+.navbar .logo {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 700;     /* Slightly bolder for brand recognition */
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;            /* Ensures no default browser margin pushes the bar */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase; /* Fits the Zara-style aesthetic better */
+  letter-spacing: 1px;
+}
+
+.navbar a:hover {
+  opacity: 0.6;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+}

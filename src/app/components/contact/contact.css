@@ -1,0 +1,98 @@
+.contact-container {
+  padding: 100px 0;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+}
+
+/* Left Side Styling */
+.contact-info .subtitle {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #888;
+}
+
+.contact-info h1 {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  margin: 20px 0;
+}
+
+.description {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.info-block {
+  margin-bottom: 30px;
+}
+
+.info-block strong {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+/* Form Styling */
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #ddd; /* Only a bottom border for a cleaner look */
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-bottom: 1px solid #000;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 18px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 60px 20px;
+  }
+
+  .contact-info h1 {
+    font-size: 32px;
+  }
+}

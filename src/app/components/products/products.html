@@ -1,0 +1,25 @@
+<h2 class="title">SHOP COLLECTION</h2>
+
+<div class="category-menu">
+  <button (click)="setCategory('All')" [class.active]="selectedCategory === 'All'">ALL</button>
+  <button (click)="setCategory('Tops')" [class.active]="selectedCategory === 'Tops'">TOPS</button>
+  <button (click)="setCategory('Outerwear')" [class.active]="selectedCategory === 'Outerwear'">OUTERWEAR</button>
+</div>
+
+<div class="grid">
+  @for (item of filteredProducts; track item.name) {
+    <div class="card">
+      <div class="image-wrapper">
+        <img [src]="item.image" alt="">
+        <div class="overlay">
+          <button>VIEW</button>
+        </div>
+      </div>
+
+      <div class="info">
+        <h3>{{item.name}}</h3>
+        <p>{{item.price}}</p>
+      </div>
+    </div>
+  }
+</div>
