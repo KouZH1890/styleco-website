@@ -1,16 +1,18 @@
 .contact-container {
-  padding: 100px 0;
+  padding: 100px 20px; /* 🔥 add side padding */
   max-width: 1100px;
   margin: auto;
 }
 
+/* GRID */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 80px;
+  align-items: start;
 }
 
-/* Left Side Styling */
+/* LEFT SIDE */
 .contact-info .subtitle {
   letter-spacing: 4px;
   font-size: 11px;
@@ -18,7 +20,7 @@
 }
 
 .contact-info h1 {
-  font-size: 48px;
+  font-size: clamp(28px, 5vw, 48px); /* 🔥 responsive */
   font-weight: 300;
   letter-spacing: 5px;
   margin: 20px 0;
@@ -28,6 +30,7 @@
   color: #666;
   line-height: 1.8;
   margin-bottom: 40px;
+  font-size: 14px;
 }
 
 .info-block {
@@ -41,7 +44,7 @@
   margin-bottom: 5px;
 }
 
-/* Form Styling */
+/* FORM */
 .input-group {
   margin-bottom: 25px;
 }
@@ -58,7 +61,7 @@ input, textarea, select {
   width: 100%;
   padding: 12px 0;
   border: none;
-  border-bottom: 1px solid #ddd; /* Only a bottom border for a cleaner look */
+  border-bottom: 1px solid #ddd;
   font-family: inherit;
   font-size: 14px;
   outline: none;
@@ -69,6 +72,7 @@ input:focus, textarea:focus {
   border-bottom: 1px solid #000;
 }
 
+/* BUTTON */
 .submit-btn {
   width: 100%;
   background: #000;
@@ -86,13 +90,60 @@ input:focus, textarea:focus {
   background: #333;
 }
 
-/* Mobile Responsiveness */
+/* ============================= */
+/* 📱 TABLET */
+/* ============================= */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;  /* 🔥 stack layout */
+    gap: 50px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .info-block {
+    text-align: center;
+  }
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
 @media (max-width: 768px) {
   .contact-container {
     padding: 60px 20px;
   }
 
   .contact-info h1 {
-    font-size: 32px;
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 12px;
+  }
+
+  input, textarea, select {
+    font-size: 13px;
+  }
+}
+
+/* ============================= */
+/* 📱 SMALL MOBILE */
+/* ============================= */
+@media (max-width: 480px) {
+  .contact-info h1 {
+    font-size: 24px;
+  }
+
+  .contact-container {
+    padding: 40px 15px;
   }
 }
