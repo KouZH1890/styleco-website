@@ -4,7 +4,7 @@
 
   background:
     linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
-    url('/assets/banner.jpg') center/cover no-repeat fixed;
+    url('../../../assets/banner.jpg') center/cover no-repeat fixed;
 
   display: flex;
   justify-content: center;
